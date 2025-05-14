@@ -28,10 +28,10 @@ git add . > /dev/null 2>&1
 
 # 处理行尾差异（Windows需要特别处理）
 if [ "$OSTYPE" = "msys" ]; then
-    git commit -m "从Windows同步: $(date +"%Y-%m-%d %H:%M:%S")" > /dev/null 2>&1
+    git commit -m "从Windows同步draws: $(date +"%Y-%m-%d %H:%M:%S")" > /dev/null 2>&1
     git config --local core.autocrlf false > /dev/null 2>&1
 else
-    git commit -m "从Ubuntu同步: $(date +"%Y-%m-%d %H:%M:%S")" > /dev/null 2>&1
+    git commit -m "从Ubuntu同步draws: $(date +"%Y-%m-%d %H:%M:%S")" > /dev/null 2>&1
 fi
 
 # 网络重试机制（适用于不稳定的网络环境）
